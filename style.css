@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Epilogue', 'sans-serif';
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0, 0%, 98%);
+}
+
+nav{
+    width: 100%;
+}
+
+.navDiv{
+     max-width: 84.5rem;
+    padding-block: 1.2rem;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2.3rem;
+    overflow: hidden;
+}
+.image{
+    position: relative;
+    top: 0.4rem;
+    right: 0.2rem;
+}
+
+.logoAnd{
+    display: flex;
+    align-items: center;
+}
+
+.links{
+    display: flex;
+    margin-left: 3.5rem;
+    list-style: none;
+    justify-content: space-between;
+    width: 22rem;
+    letter-spacing: 0.5px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.links li{
+    font-size: 0.8rem;
+    display: flex;
+    gap: 0.4rem;
+    color: hsl(0, 0%, 41%);
+}
+.links li:hover, .login:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.loginAnd{
+    display: flex;
+}
+
+.login{
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+     padding-inline: 2.2rem;
+    padding-block: 0.7rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.register{
+    padding-inline: 1.3rem;
+    padding-block: 0.7rem;
+    font-size: 0.85rem;
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 0.7rem;
+
+    text-decoration: none;
+    color:hsl(0, 0%, 41%);
+    transition: 0.3s all ease;
+}
+.register:hover{
+    border-color: black;
+    color: black;
+}
+
+main{
+    /* display: flex;
+    padding-left: 9.7rem;
+    /* position: relative;
+    top: 10rem;  it was just for checking */
+    /* padding-top: 1.2rem; */ 
+    width: 100%;
+}
+.mainDiv{
+    display: flex;
+    max-width: 84.5rem;
+    padding-left: 9.7rem;
+    padding-top: 1.2rem;
+    margin-inline: auto;
+}
+
+.content{
+    width: 37rem;
+}
+
+.headingDiv{
+    width: 80%;
+}
+
+.heading{
+    font-size: 4.5rem;
+    margin-top: 7.5rem;
+}
+
+.heroImage{
+    height: 40rem;
+    width: 28rem;
+    margin-left: 2rem;
+    background: url('./images/image-hero-desktop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.heroimg{
+    width: 100%;
+    height: 100%;
+}
+
+.textDiv{
+    width: 75%;
+}
+
+.text{
+    margin-top: 2.9rem;
+    font-size: 1rem;
+    line-height: 1.65rem;
+    letter-spacing: 0.5px;
+    color: hsl(0, 0%, 41%);
+}
+
+.button{
+    font-size: 1rem;
+    font-weight: 700;
+    padding-inline: 0.9rem;
+    padding-block: 1.1rem;
+    color:hsl(0, 0%, 98%);
+    background-color: black;
+    width: 9.5rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    margin-top: 3rem;
+    transition: 0.2s ease-in-out all;
+    border: 1px solid black;
+}
+.button:hover{
+    background-color: hsl(0, 0%, 98%);
+    color: black;
+    cursor: pointer;
+}
+
+.brands{
+    display: flex;
+    margin-top: 7rem;
+}
+.brandImg{
+    width: 100%;
+}
+.brandDiv{
+   width: 6rem;
+}
+.brandDiv:nth-of-type(1){
+    width: 6.5rem;
+}
+.brandDiv:nth-of-type(2){
+    width: 4.5rem;
+    margin-left: 2.5rem;
+    position: relative;
+    top: -0.6rem;
+}
+.brandDiv:nth-of-type(3){
+    margin-left: 1.9rem;
+    width: 5.5rem;
+}
+.brandDiv:nth-of-type(4){
+    margin-left: 2rem;
+    width: 5rem;
+}
+
+.menu{
+    display: none;
+}
+
+.sidebarRight{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 98%);
+    z-index: 1000;
+    overflow: hidden;
+    transition: 0.3s all ease-in-out;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.521);
+    z-index: 200;
+    display: none;
+    transition: 0.4s all ease;
+}
+.crossIcon{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.linksMobile{
+    margin-top: 4rem;
+    list-style: none;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.linksMobile li{
+    display: flex;
+    gap: 1rem;
+}
+.linksMobile li p{
+    color: hsl(0, 0%, 41%);
+    letter-spacing: 1px;
+}
+
+.loginAndMobile{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: hsl(0, 0%, 41%);
+}
+.registerMobile{
+    text-align: center;
+    padding-block: 1rem;
+    border: 1px solid  hsl(0, 0%, 41%);;
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+.registerMobile:hover,.linksMobile li p:hover{
+    color: black;
+}
+.features{
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.features ul li{
+    margin-top: 1rem;
+    display: flex;
+    margin-left: 1.5rem;
+}
+.features ul {
+ transition: 0.2s all ease;
+}
+
+.features ul li:nth-of-type(4){
+    margin-bottom: 1rem;
+}
+
+.company{
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.company ul li{
+    margin-top: 1rem;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    transition: 0.2s all ease;
+}
+.company ul {
+ transition: 0.2s all ease;
+}
+.company ul li:hover {
+    color: black;
+}
+
+.featuresX{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    top: 4rem;
+    margin-left: -1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.178);
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.companyX{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    top: 4rem;
+    margin-left: -1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.178);
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.featuresX ul li{
+    display: flex;
+    margin-top: 0.5rem;
+}
+.companyX ul li{
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.links__features:hover ~ .featuresX {
+    display: flex;
+}
+.links__company:hover ~ .companyX {
+    display: flex;
+}
+
+
+/* Responsiveness handling */
+@media only screen and ( max-width: 600px) {
+   
+
+    .navDiv{
+        margin: 0;
+    }
+    .menu{
+        display: block;
+    }
+
+    .links,.login, .register{
+        display: none;
+    }
+
+    .mainDiv{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .heroImage{
+        background-image: url('./images//image-hero-mobile.png');
+        width: 100%;
+        margin: 0;
+        height: 25rem;
+    }
+
+    .content{
+        width: 100%;
+    }
+    .headingDiv{
+        width: 100%;
+        text-align: center;
+    }
+    .heading{
+        font-size: 2rem;
+        margin-top: 0;
+    }
+    .textDiv{
+        width: 100%;
+        padding-inline: 2.5rem ;
+    }
+    .text{
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .button{
+        margin-top: 1.5rem;
+        margin-inline: auto;
+    }
+    .brands{
+        margin-top: 3rem;
+        padding: 0.5rem;
+    }
+    .brandDiv{
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 820px){
+    .mainDiv{
+        flex-direction: column-reverse;
+        padding: 0;
+        width: 100%;
+    }
+    .heroImage{
+        margin-inline: auto;
+    }
+    .headingDiv, .textDiv{
+        margin-inline: auto;
+    }
+    .heading{
+        margin-top: 1rem;  
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-inline: auto;
+    }
+    .button{
+        margin-inline:auto;
+    }
+}
+
+@media only screen and (max-width: 912px){
+    .mainDiv{
+        padding-left: 0;
+    }
+    .content{
+        width: 100%;
+    }
+    .brands{
+        margin-top: 2rem;
+    }
+}
